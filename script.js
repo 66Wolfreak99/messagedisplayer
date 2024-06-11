@@ -5,5 +5,9 @@ const form = document.getElementById("form")
 form.addEventListener("submit",(event) => {
     event.preventDefault();
     const input = document.querySelector("input").value;
-    bigMessage.textContent = input
+    input.trim();
+    if(input){
+        bigMessage.textContent = input;
+        form.reset()
+    }
 } )
